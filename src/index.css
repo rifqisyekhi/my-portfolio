@@ -1,0 +1,1148 @@
+/* =========================================
+   1. GLOBAL RESET, FONTS & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400;700;900&display=swap');
+
+:root {
+  /* Palet 10 Warna Vibrant Color Clash */
+  --merah: #E63946;
+  --putih-krem: #F1FAEE;
+  --kuning: #F1C40F;
+  --abu-muda: #D8E2DC;
+  --biru-muda: #A8DADC;
+  --biru-sedang: #457B9D;
+  --biru-dongker: #1D3557;
+  --kuning-mustard: #F9C74F;
+  --oranye: #F3722C;
+  --hijau-teal: #2A9D8F;
+
+  /* Warna Wajib Neobrutalism */
+  --hitam-garis: #000000; 
+  --putih-murni: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* KUNCI ANTI-BLEBER 1 */
+}
+
+html, body {
+  font-family: 'Lexend Mega', sans-serif;
+  color: var(--hitam-garis); 
+  background-color: var(--putih-krem);
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* KUNCI ANTI-BLEBER 2 */
+  width: 100%;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================
+   2. SECTION WRAPPERS (NORMAL SCROLL)
+   ========================================= */
+.bg-hero-section,
+.bg-white-section,
+.bg-skills-section,
+.bg-contact-section,
+.bg-footer-section,
+.bg-yellow-solid-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-hero-section {
+  min-height: 100vh;
+  background-color: var(--biru-muda);
+}
+
+.bg-white-section { background-color: var(--putih-krem); }
+.bg-skills-section { background-color: var(--kuning); }
+.bg-yellow-solid-section { background-color: var(--abu-muda); } 
+.bg-contact-section { background-color: var(--merah); }
+.bg-footer-section { background-color: var(--biru-dongker); }
+
+/* =========================================
+   3. GLOBAL UTILITIES (NEOBRUTALISM & COLORS)
+   ========================================= */
+.neo-box {
+  border: 3px solid var(--hitam-garis);
+  box-shadow: 5px 5px 0px var(--hitam-garis);
+  transition: all 0.2s ease;
+  max-width: 100%; /* KUNCI ANTI-BLEBER 3 */
+}
+
+button.neo-box:active {
+  box-shadow: 2px 2px 0px var(--hitam-garis);
+  transform: translate(3px, 3px);
+}
+
+.neo-box-dark {
+  border: 2px solid var(--putih-murni);
+  box-shadow: 4px 4px 0px var(--putih-murni);
+  color: var(--hitam-garis);
+}
+
+/* Pemetaan Warna */
+.pink, .bg-pink { background-color: var(--merah); }
+.cyan, .bg-cyan { background-color: var(--biru-muda); }
+.yellow, .bg-yellow { background-color: var(--kuning-mustard); }
+.green, .bg-green { background-color: var(--hijau-teal); }
+.purple, .bg-purple { background-color: var(--biru-dongker); color: var(--putih-murni); }
+.blue, .bg-blue { background-color: var(--biru-sedang); color: var(--putih-murni); }
+
+/* =========================================
+   4. NAVBAR COMPONENT
+   ========================================= */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 999;
+  background-color: var(--putih-murni);
+  border-bottom: 3px solid var(--hitam-garis);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+
+.logo-custom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo-text-plain { color: var(--hitam-garis); }
+.logo-text-box {
+  background-color: var(--kuning);
+  padding: 4px 10px;
+  border: 3px solid var(--hitam-garis);
+}
+
+.nav-links-clean {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links-clean a {
+  text-decoration: none;
+  color: var(--hitam-garis);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-links-clean a:hover { color: var(--oranye); }
+
+.btn-lang {
+  background-color: var(--biru-dongker);
+  color: var(--putih-murni);
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* =========================================
+   5. HERO COMPONENT
+   ========================================= */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 60px 40px 60px; 
+  gap: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.badge {
+  background-color: var(--kuning);
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.title-name {
+  background-color: var(--putih-murni);
+  padding: 10px 24px;
+  font-size: 2.2rem; 
+  letter-spacing: 2px;
+}
+
+.title-role {
+  background-color: var(--biru-muda);
+  padding: 10px 24px;
+  font-size: 2.2rem; 
+  letter-spacing: 2px;
+}
+
+.description {
+  background-color: var(--putih-murni);
+  padding: 24px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  width: 100%; 
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: var(--hijau-teal);
+  color: var(--putih-murni);
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  background-color: var(--putih-murni);
+  width: 50px; 
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; 
+  color: var(--hitam-garis);
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  background-color: var(--biru-muda);
+  color: var(--hitam-garis);
+}
+
+.hero-image-area {
+  flex: 1; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  position: relative; 
+  min-height: 400px; 
+}
+
+.photo-backdrop {
+  position: absolute; 
+  width: 100%;
+  max-width: 380px; 
+  aspect-ratio: 1 / 1; 
+  background-color: var(--kuning); 
+  border: 4px solid var(--hitam-garis);
+  transform: rotate(6deg) translate(10px, 10px); 
+  z-index: 1; 
+}
+
+.photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--putih-murni);
+  padding: 16px;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border: 3px solid var(--hitam-garis); 
+}
+
+/* =========================================
+   6. ABOUT COMPONENT
+   ========================================= */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  background-color: var(--oranye);
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.card h4 { font-size: 1.2rem; margin-top: 10px; }
+.card p { line-height: 1.6; }
+
+.todo-list {
+  list-style-type: square;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.icon-box {
+  background-color: var(--putih-murni);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-pale-green { background-color: var(--abu-muda); }
+.card-pale-yellow { background-color: var(--putih-krem); }
+.card-cyan { background-color: var(--biru-muda); }
+.card-pink { background-color: var(--merah); }
+.card-yellow { background-color: var(--kuning-mustard); }
+
+/* =========================================
+   7. SKILLS COMPONENT
+   ========================================= */
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+.section-title-green {
+  background-color: var(--hijau-teal);
+  color: var(--putih-murni);
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.skill-category {
+  background-color: var(--putih-murni);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.category-header {
+  padding: 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 3px solid var(--hitam-garis);
+}
+
+.category-body {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background-color: var(--putih-murni);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stats-banner {
+  background-color: var(--oranye);
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-number {
+  background-color: var(--putih-murni);
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* =========================================
+   8. PROJECTS COMPONENT (DESKTOP)
+   ========================================= */
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title-cyan {
+  background-color: var(--biru-muda);
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.projects-header-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 16px;
+}
+
+.arrow-btn {
+  background-color: var(--kuning);
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.projects-scroll-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  min-width: 350px;
+  background-color: var(--putih-murni);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden; 
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--hitam-garis);
+}
+
+.project-header {
+  padding: 16px 20px;
+  border-bottom: 3px solid var(--hitam-garis);
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+.project-body p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  background-color: var(--putih-murni);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn-code, .btn-live {
+  flex: 1;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-code { background-color: var(--putih-murni); }
+.btn-live { background-color: var(--hijau-teal); color: var(--putih-murni); }
+
+/* =========================================
+   9. CERTIFICATES COMPONENT
+   ========================================= */
+.certificates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px; 
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title-large {
+  background-color: var(--putih-murni);
+  padding: 16px 40px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cert-card {
+  background-color: var(--putih-murni);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 calc((100% - 60px) / 3);
+}
+
+.cert-image-wrapper {
+  border: 2px solid var(--hitam-garis);
+  padding: 10px;
+  background-color: var(--putih-krem);
+}
+
+.cert-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3; 
+  object-fit: cover;
+  border: 1px solid var(--abu-muda);
+}
+
+.btn-details {
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid var(--hitam-garis);
+  width: 100%; 
+}
+
+/* =========================================
+   10. CONTACT COMPONENT
+   ========================================= */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 120px; 
+  margin-top: -40px;  
+}
+
+.section-title-pink {
+  background-color: var(--kuning-mustard);
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background-color: var(--putih-murni);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-text { font-size: 1.2rem; font-weight: bold; }
+.desc-text { line-height: 1.6; }
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+}
+
+.icon-box-small {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.availability-banner {
+  background-color: var(--hijau-teal);
+  color: var(--putih-murni);
+  padding: 20px;
+  font-size: 1.05rem;
+}
+
+.contact-form-card {
+  background-color: var(--putih-murni);
+  padding: 30px;
+}
+
+.form-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.neo-input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid var(--hitam-garis);
+  box-shadow: 4px 4px 0px var(--hitam-garis);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.neo-input:focus {
+  box-shadow: 2px 2px 0px var(--hitam-garis);
+  transform: translate(2px, 2px);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: var(--biru-sedang);
+  color: var(--putih-murni);
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 3px solid var(--hitam-garis);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* =========================================
+   11. FOOTER COMPONENT
+   ========================================= */
+.footer-container {
+  color: var(--putih-krem);
+  padding: 60px 40px 30px 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+}
+
+.logo-dark {
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  align-self: flex-start;
+}
+
+.brand-text { line-height: 1.6; }
+
+.footer-title {
+  padding: 8px 16px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: var(--putih-krem);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: var(--biru-muda);
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon-btn {
+  background-color: var(--putih-murni);
+  width: 45px;
+  height: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.icon-btn:active {
+  box-shadow: 2px 2px 0px var(--putih-murni);
+  transform: translate(2px, 2px);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  text-align: center;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 2px solid var(--abu-muda);
+  margin-bottom: 20px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: var(--abu-muda);
+}
+
+/* =========================================
+   12. DESIGN PROJECTS COMPONENT
+   ========================================= */
+.design-card {
+  background-color: var(--putih-murni);
+  display: flex;
+  flex-direction: row; 
+  flex: 0 0 100%; 
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.design-content {
+  flex: 1; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 3px solid var(--hitam-garis); 
+}
+
+.design-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--biru-dongker); 
+  margin-bottom: 10px;
+}
+
+.design-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.design-image-area {
+  flex: 1; 
+  background-color: var(--putih-krem);
+  position: relative; 
+  min-height: 400px; 
+}
+
+.design-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px; 
+  box-sizing: border-box; 
+  object-fit: contain; 
+}
+
+/* =========================================
+   13. RESPONSIVE LAYOUT (MOBILE & TABLET FULL FIX)
+   ========================================= */
+@media (max-width: 768px) {
+  
+  /* --- A. HERO SECTION & FONTS --- */
+  .hero-container {
+    flex-direction: column; 
+    padding: 120px 20px 40px 20px !important; 
+    gap: 40px;
+  }
+
+  .title-name, .title-role {
+    font-size: 1.5rem !important; 
+    padding: 12px 16px !important;
+    white-space: normal; 
+    word-wrap: break-word; 
+  }
+
+  .description {
+    font-size: 1rem !important;
+    padding: 16px !important;
+  }
+
+  .photo-backdrop, .photo-frame {
+    max-width: 100%; 
+  }
+
+  /* --- B. PADDING SEMUA CONTAINER BIAR RAPI --- */
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .certificates-container,
+  .contact-container,
+  .footer-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* --- C. GRID DITUMPUK JADI 1 KOLOM --- */
+  .grid-top,
+  .grid-bottom,
+  .skills-grid,
+  .contact-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .stats-banner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* --- D. CAROUSEL PROJECT & CERTIFICATE --- */
+  
+  /* Header Judul & Tombol sejajar di HP */
+  .projects-header-area {
+    flex-direction: row !important; 
+    justify-content: space-between !important; 
+    align-items: center !important;
+    flex-wrap: wrap !important; 
+    gap: 10px;
+    width: 100%;
+  }
+
+  .carousel-controls {
+    display: flex !important;
+    gap: 10px;
+  }
+
+  .arrow-btn {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.2rem !important;
+  }
+
+  .projects-scroll-container {
+    scroll-snap-type: x mandatory; 
+    padding-right: 20px;
+  }
+
+  .project-card, 
+  .cert-card {
+    flex: 0 0 85vw !important; 
+    min-width: 250px !important; 
+    max-width: 85vw !important; 
+    scroll-snap-align: center;
+  }
+
+  .project-actions {
+    flex-direction: column !important; 
+    gap: 10px !important;
+  }
+  
+  .btn-code, .btn-live {
+    width: 100% !important; 
+  }
+
+  /* --- E. DESIGN PROJECTS --- */
+  .design-card {
+    flex-direction: column !important; 
+    
+    /* JURUS MUTLAK: Samakan persis dengan kartu Project agar bisa di-swipe rapi! */
+    flex: 0 0 85vw !important; 
+    min-width: 250px !important; 
+    max-width: 85vw !important; 
+    scroll-snap-align: center !important;
+  }
+  
+  .design-content {
+    border-right: none !important;
+    border-bottom: 3px solid var(--hitam-garis) !important; 
+    padding: 20px !important; 
+    
+    /* Kunci konten agar tidak menjebol kotak */
+    width: 100% !important; 
+    box-sizing: border-box !important;
+  }
+
+  .design-title {
+    font-size: 1.5rem !important; /* Perkecil lagi agar aman */
+    word-wrap: break-word !important;
+  }
+
+  .design-image-area {
+    min-height: 300px !important; 
+    width: 100% !important;
+  }
+
+  .design-poster {
+    /* Kurangi jarak bingkai di HP agar poster bisa tampil lebih besar */
+    padding: 15px !important; 
+  }
+
+  /* --- F. NAVBAR MOBILE --- */
+  .nav-links-clean {
+    display: none; 
+  }
+  
+  .navbar-container {
+    padding: 16px 20px;
+  }
+
+  /* --- G. PERBAIKAN CERTIFICATES DI HP --- */
+  
+  /* 1. Perkecil judul agar pas di layar */
+  .section-title-large {
+    font-size: 1.5rem !important; 
+    padding: 12px 20px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* 2. Jejerkan Judul dan Tombol Panah (Kiri-Kanan) */
+  .title-wrapper {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+    flex-wrap: wrap !important;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* 3. Sulap Grid menjadi Swipeable Carousel (Horizontal Scroll) */
+  .certificates-grid {
+    display: flex !important; /* Paksa matikan fungsi Grid */
+    flex-direction: row !important; /* Paksa berbaris ke samping */
+    overflow-x: auto !important; /* Izinkan geser */
+    scroll-snap-type: x mandatory !important; /* Efek magnet */
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    gap: 30px !important;
+    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE/Edge */
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+  }
+
+  /* Sembunyikan scrollbar di Chrome/Safari */
+  .certificates-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* --- H. PERBAIKAN CONTACT SECTION DI HP --- */
+  
+  /* 1. Jinakkan kartu putih agar patuh pada layar */
+  .info-card, 
+  .availability-banner, 
+  .contact-form-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important; /* Perkecil sedikit ruang kosong di HP */
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Paksa teks panjang (seperti email/nomor HP) untuk turun baris */
+  .contact-item {
+    align-items: flex-start !important; /* Ikon tetap di atas meski teks turun */
+    overflow-wrap: break-word !important; 
+    word-break: break-word !important; /* Jurus mutlak pemotong teks panjang */
+    width: 100%;
+  }
+
+  /* 3. Kunci kolom input dan tombol agar pas 100% dalam kotak */
+  .neo-input, 
+  .textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
+  }
+
+  /* --- I. FIX DESIGN PROJECTS TITLE & SWIPE DI HP --- */
+  
+  /* 1. Kunci area header agar tidak melar keluar layar */
+  .projects-header-area {
+    max-width: 100% !important; 
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Jinakkan judul "DESIGN PROJECTS" yang pakai inline-style 2rem */
+  .projects-header-area h2 {
+    font-size: 1.2rem !important; /* Paksa mengecil */
+    padding: 10px 15px !important;
+    
+    /* KUNCI: Sisakan ruang 100px di sebelah kanan agar tombol panah tidak tergencet */
+    max-width: calc(100% - 100px) !important; 
+    
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    margin: 0 !important;
+  }
+
+  /* 3. Rapikan teks "Poster Kewarganegaraan" agar huruf 'an' nya tidak terbelah ke bawah */
+  .design-title {
+    font-size: 1.4rem !important; 
+    word-break: normal !important; /* Jangan belah kata di tengah huruf */
+    overflow-wrap: break-word !important;
+  }
+
+}

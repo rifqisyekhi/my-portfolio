@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import Documentation from './components/Documentation';
 import Projects from './components/Projects';
 import DesignProjects from './components/DesignProjects';
 import Certificates from './components/Certificates';
@@ -14,7 +15,6 @@ function App() {
     <>
       <Navbar />
 
-      {/* Wadah snap-container sudah dihapus, komponen berjejer bebas */}
       <div className="bg-hero-section">
         <Hero />
       </div>
@@ -25,6 +25,11 @@ function App() {
       
       <div className="bg-skills-section">
         <Skills />
+      </div>
+      
+      {/* SECTION BARU: Documentation (Galeri Foto) */}
+      <div className="bg-yellow-solid-section">
+        <Documentation />
       </div>
       
       <div className="bg-white-section">

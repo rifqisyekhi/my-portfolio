@@ -12,17 +12,13 @@ export default function Projects() {
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
       const card = scrollContainerRef.current.children[0];
-      
+
       if (card) {
         const cardWidth = card.offsetWidth;
         const gap = 30;
-        
-        // LOGIKA BARU: Cek apakah user buka di HP (lebar layar <= 768px)?
         const isMobile = window.innerWidth <= 768;
-        
-        // Kalau di HP, geser 1 kartu. Kalau di Laptop, geser 3 kartu.
-        const scrollAmount = isMobile ? (cardWidth + gap) : (cardWidth + gap) * 3;
-        
+        const scrollAmount = isMobile ? cardWidth + gap : (cardWidth + gap) * 3;
+
         scrollContainerRef.current.scrollBy({
           left: direction === "left" ? -scrollAmount : scrollAmount,
           behavior: "smooth",
@@ -49,7 +45,7 @@ export default function Projects() {
         {/* Proyek 1 */}
         <div className="project-card neo-box">
           <img src={siskaCover} alt="SisKA Bot" className="project-image" />
-          <div className="project-header bg-cyan"> {/* Ganti class cyan menjadi bg-cyan */}
+          <div className="project-header bg-cyan">
             <h3>Chatbot WhatsApp</h3>
           </div>
           <div className="project-body">
@@ -66,7 +62,19 @@ export default function Projects() {
               <span className="neo-box tech-tag">Ollama</span>
             </div>
             <div className="project-actions">
-              <button className="btn-code neo-box">🐙 Code</button>
+              <a
+                href="https://github.com/rifqisyekhi/chatbot-whatsapp-siska"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-code neo-box"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--hitam-garis)", /* Teks Hitam */
+                }}
+              >
+                🐙 Code
+              </a>
+
               <button className="btn-live neo-box">↗ Live</button>
             </div>
           </div>
@@ -75,7 +83,9 @@ export default function Projects() {
         {/* Proyek 2 */}
         <div className="project-card neo-box">
           <img src={bpljCover} alt="BPLJ" className="project-image" />
-          <div className="project-header bg-pink"> {/* Ganti class pink menjadi bg-pink */}
+          <div className="project-header bg-pink">
+            {" "}
+            {/* Ganti class pink menjadi bg-pink */}
             <h3>Meeting Schedule App</h3>
           </div>
           <div className="project-body">
@@ -90,7 +100,15 @@ export default function Projects() {
               <span className="neo-box tech-tag">PHP</span>
             </div>
             <div className="project-actions">
-              <button className="btn-code neo-box">🐙 Code</button>
+              <a
+                href="https://github.com/rifqisyekhi/kp-adminpanel-bplj-baru"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-code neo-box"
+                style={{ textDecoration: "none", color: "var(--hitam-garis)" }} /* Teks Hitam */
+              >
+                🐙 Code
+              </a>
               <button className="btn-live neo-box">↗ Live</button>
             </div>
           </div>
@@ -104,7 +122,9 @@ export default function Projects() {
             className="project-image"
             style={{ objectPosition: "15% center" }}
           />
-          <div className="project-header bg-yellow"> {/* Ganti class yellow menjadi bg-yellow */}
+          <div className="project-header bg-yellow">
+            {" "}
+            {/* Ganti class yellow menjadi bg-yellow */}
             <h3>Expedition 1001 Curug</h3>
           </div>
           <div className="project-body">
@@ -118,7 +138,16 @@ export default function Projects() {
             </div>
             <div className="project-actions">
               <button className="btn-code neo-box">🐙 Code</button>
-              <button className="btn-live neo-box">↗ Live</button>
+              {/* Diubah menjadi <a> dan warnanya disesuaikan */}
+              <a
+                href="https://www.roblox.com/games/111951050190848/Ekspedisi-1001-Curug"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-live neo-box"
+                style={{ textDecoration: "none", color: "var(--putih-murni)" }} /* Teks Putih */
+              >
+                ↗ Live
+              </a>
             </div>
           </div>
         </div>
@@ -126,7 +155,9 @@ export default function Projects() {
         {/* Proyek 4 */}
         <div className="project-card neo-box">
           <img src={roblox2Cover} alt="Game Farmer" className="project-image" />
-          <div className="project-header bg-green"> {/* Hapus inline style, gunakan class bg-green */}
+          <div className="project-header bg-green">
+            {" "}
+            {/* Hapus inline style, gunakan class bg-green */}
             <h3>Game Farmer</h3>
           </div>
           <div className="project-body">
@@ -152,7 +183,9 @@ export default function Projects() {
             alt="Game Witcher"
             className="project-image"
           />
-          <div className="project-header bg-purple"> {/* Hapus inline style, gunakan class bg-purple */}
+          <div className="project-header bg-purple">
+            {" "}
+            {/* Hapus inline style, gunakan class bg-purple */}
             <h3>Game Witcher Haunted Flight</h3>
           </div>
           <div className="project-body">
@@ -172,7 +205,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-live neo-box"
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", color: "var(--putih-murni)" }} /* Teks Putih */
               >
                 ↗ Live
               </a>
@@ -182,25 +215,38 @@ export default function Projects() {
 
         {/* Proyek 6 */}
         <div className="project-card neo-box">
-          <img src={mediaCover} alt="Media Processor" className="project-image" />
-          <div className="project-header bg-blue"> {/* Hapus inline style, gunakan class bg-blue */}
+          <img
+            src={mediaCover}
+            alt="Media Processor"
+            className="project-image"
+          />
+          <div className="project-header bg-blue">
+            {" "}
             <h3>Media Processor</h3>
           </div>
           <div className="project-body">
             <p>
-              This web application provides various features for media processing, including images, audio, and video.
+              This web application provides various features for media
+              processing, including images, audio, and video.
             </p>
             <div className="project-tech">
               <span className="neo-box tech-tag">Python</span>
               <span className="neo-box tech-tag">Lossy Algorithm</span>
             </div>
             <div className="project-actions">
-              <button className="btn-code neo-box">🐙 Code</button>
+              <a
+                href="https://github.com/rifqisyekhi/Mediaprocessor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-code neo-box"
+                style={{ textDecoration: "none", color: "var(--hitam-garis)" }} /* Teks Hitam */
+              >
+                🐙 Code
+              </a>
               <button className="btn-live neo-box">↗ Live</button>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

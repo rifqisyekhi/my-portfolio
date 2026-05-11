@@ -1,6 +1,4 @@
-// src/components/Certificates.jsx
 import { useRef } from "react";
-
 import sertifICT from "../assets/Sertifikat_ICT_Excel.jpeg";
 import sertifTOEFA from "../assets/Sertifikat_TOEFA.jpg";
 import sertifDicoding1 from "../assets/BelajarDasarAi.png";

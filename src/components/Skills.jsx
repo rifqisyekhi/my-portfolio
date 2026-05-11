@@ -1,13 +1,8 @@
-// src/components/Skills.jsx
 export default function Skills() {
   return (
     <section className="skills-container" id="skills">
-      {/* Judul Section */}
       <div className="section-title-green neo-box">Skills & Technologies</div>
-
-      {/* --- BLOK ATAS: 3 Kategori (Grid) --- */}
       <div className="skills-grid">
-        
         {/* Kategori 1: Frontend */}
         <div className="skill-category neo-box">
           <div className="category-header pink">Frontend</div>
@@ -40,10 +35,7 @@ export default function Skills() {
             <span className="skill-tag neo-box">Editing</span>
           </div>
         </div>
-
       </div>
-
-      {/* --- BLOK BAWAH: Banner Statistik (Flexbox) --- */}
       <div className="stats-banner neo-box">
         <div className="stat-item">
           <div className="stat-number neo-box">1+</div>

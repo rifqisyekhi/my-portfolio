@@ -1,14 +1,8 @@
-// src/components/Contact.jsx
 export default function Contact() {
   return (
     <section className="contact-container" id="contact">
-      {/* Judul Section */}
       <div className="section-title-pink neo-box">Get In Touch</div>
-
-      {/* Grid 2 Kolom */}
       <div className="contact-grid">
-        
-        {/* --- KOLOM KIRI: Informasi --- */}
         <div className="contact-info-column">
           <div className="info-card neo-box">
             <p className="intro-text">Let's work together!</p>
@@ -16,8 +10,6 @@ export default function Contact() {
               I'm always interested in hearing about new projects and opportunities. 
               Whether you have a question or just want to say hi, feel free to reach out!
             </p>
-            
-            {/* Baris Daftar Kontak */}
             <div className="contact-list">
               <div className="contact-item">
                 <div className="icon-box-small neo-box bg-cyan">✉</div>
@@ -33,14 +25,10 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Banner Ketersediaan */}
           <div className="availability-banner neo-box">
             💡 <strong>Currently available</strong> for freelance work and full-time opportunities!
           </div>
         </div>
-
-        {/* --- KOLOM KANAN: Formulir --- */}
         <div className="contact-form-card neo-box">
           <form className="form-elements">
             

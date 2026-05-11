@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import { useRef } from "react";
 import siskaCover from "../assets/SiskaCover.png";
 import bpljCover from "../assets/BPLJCover.png";
@@ -69,7 +68,7 @@ export default function Projects() {
                 className="btn-code neo-box"
                 style={{
                   textDecoration: "none",
-                  color: "var(--hitam-garis)", /* Teks Hitam */
+                  color: "var(--hitam-garis)",
                 }}
               >
                 🐙 Code
@@ -85,7 +84,6 @@ export default function Projects() {
           <img src={bpljCover} alt="BPLJ" className="project-image" />
           <div className="project-header bg-pink">
             {" "}
-            {/* Ganti class pink menjadi bg-pink */}
             <h3>Meeting Schedule App</h3>
           </div>
           <div className="project-body">
@@ -105,7 +103,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-code neo-box"
-                style={{ textDecoration: "none", color: "var(--hitam-garis)" }} /* Teks Hitam */
+                style={{ textDecoration: "none", color: "var(--hitam-garis)" }}
               >
                 🐙 Code
               </a>
@@ -124,7 +122,6 @@ export default function Projects() {
           />
           <div className="project-header bg-yellow">
             {" "}
-            {/* Ganti class yellow menjadi bg-yellow */}
             <h3>Expedition 1001 Curug</h3>
           </div>
           <div className="project-body">
@@ -138,13 +135,12 @@ export default function Projects() {
             </div>
             <div className="project-actions">
               <button className="btn-code neo-box">🐙 Code</button>
-              {/* Diubah menjadi <a> dan warnanya disesuaikan */}
               <a
                 href="https://www.roblox.com/games/111951050190848/Ekspedisi-1001-Curug"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-live neo-box"
-                style={{ textDecoration: "none", color: "var(--putih-murni)" }} /* Teks Putih */
+                style={{ textDecoration: "none", color: "var(--putih-murni)" }}
               >
                 ↗ Live
               </a>
@@ -157,7 +153,6 @@ export default function Projects() {
           <img src={roblox2Cover} alt="Game Farmer" className="project-image" />
           <div className="project-header bg-green">
             {" "}
-            {/* Hapus inline style, gunakan class bg-green */}
             <h3>Game Farmer</h3>
           </div>
           <div className="project-body">
@@ -185,7 +180,6 @@ export default function Projects() {
           />
           <div className="project-header bg-purple">
             {" "}
-            {/* Hapus inline style, gunakan class bg-purple */}
             <h3>Game Witcher Haunted Flight</h3>
           </div>
           <div className="project-body">
@@ -205,7 +199,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-live neo-box"
-                style={{ textDecoration: "none", color: "var(--putih-murni)" }} /* Teks Putih */
+                style={{ textDecoration: "none", color: "var(--putih-murni)" }}
               >
                 ↗ Live
               </a>
@@ -239,7 +233,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-code neo-box"
-                style={{ textDecoration: "none", color: "var(--hitam-garis)" }} /* Teks Hitam */
+                style={{ textDecoration: "none", color: "var(--hitam-garis)" }}
               >
                 🐙 Code
               </a>

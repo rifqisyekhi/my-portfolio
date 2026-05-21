@@ -1,16 +1,43 @@
-# React + Vite
+# 🚀 Rifqi Syekhi - Personal Web Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah *website* portofolio interaktif yang dibangun menggunakan **React + Vite** dengan mengusung gaya desain **Neobrutalism**. Desain ini menonjolkan warna-warna *vibrant*, batas garis yang tebal, bayangan *solid*, dan animasi mekanik yang tegas.
 
-Currently, two official plugins are available:
+🌍 **Live Demo:** [Klik di sini untuk melihat website](https://web-portfolio-rifqisyekhi.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Fitur Utama
+- **🎨 Neobrutalism UI:** Antarmuka yang unik, berani, dan anti-mainstream.
+- **📱 Fully Responsive:** Tampilan yang sudah dioptimalkan secara mutlak untuk perangkat *Mobile*, *Tablet*, maupun *Desktop*.
+- **🖱️ Swipeable Carousels:** Bagian *Projects*, *Documentation*, dan *Certificates* dapat digeser ke samping (horizontal scroll) dengan rapi, baik menggunakan *mouse* maupun sentuhan layar (*touch-swipe*).
+- **⚡ Bouncy Animations:** Efek transisi *hover* dan *load* yang menghentak dan interaktif tanpa menghilangkan identitas brutalismenya.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Framework:** React.js
+- **Build Tool:** Vite
+- **Styling:** Custom CSS (Pure CSS3) tanpa *library* eksternal untuk kontrol penuh pada gaya Neobrutalism.
+- **Deployment:** Vercel (CI/CD Integrated)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Struktur Halaman
+1. **Hero:** Perkenalan singkat dan *call-to-action*.
+2. **About:** Ringkasan profil dan keseharian.
+3. **Skills:** Daftar keahlian teknis (bahasa pemrograman & alat pendukung).
+4. **Documentation:** Galeri foto bergaya Polaroid jadul yang berisi pengalaman operasional dan proyek di lapangan.
+5. **Projects:** Daftar aplikasi, program, dan *game* yang pernah dikembangkan (dilengkapi tombol *Source Code* & *Live Preview*).
+6. **Design Projects:** Etalase desain antarmuka dan grafis.
+7. **Certificates:** Bukti pencapaian dan kompetensi.
+8. **Contact:** Formulir dan tautan media sosial untuk kolaborasi.
+
+---
+
+## 💻 Cara Menjalankan di Komputer Lokal
+
+Jika kamu ingin menjalankan atau memodifikasi kode ini di komputermu sendiri, ikuti langkah-langkah berikut:
+
+1. **Clone repository ini**
+   ```bash
+   git clone [https://github.com/rifqisyekhi/my-portfolio.git](https://github.com/rifqisyekhi/my-portfolio.git)

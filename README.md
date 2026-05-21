@@ -33,11 +33,3 @@ Sebuah *website* portofolio interaktif yang dibangun menggunakan **React + Vite*
 8. **Contact:** Formulir dan tautan media sosial untuk kolaborasi.
 
 ---
-
-## 💻 Cara Menjalankan di Komputer Lokal
-
-Jika kamu ingin menjalankan atau memodifikasi kode ini di komputermu sendiri, ikuti langkah-langkah berikut:
-
-1. **Clone repository ini**
-   ```bash
-   git clone [https://github.com/rifqisyekhi/my-portfolio.git](https://github.com/rifqisyekhi/my-portfolio.git)

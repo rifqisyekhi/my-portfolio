@@ -7,7 +7,7 @@ import siskaDokumentasi4 from "../assets/Siska4.png";
 import siskaSystemAnalyst from "../assets/siskaFlowchart.png";
 
 // BPLJ Image
-import BPLJCover from "../assets/bpljcover.png"
+import BPLJCover from "../assets/bpljcover.png";
 import BPLJDokumentasi1 from "../assets/bplj1.png";
 import BPLJDokumentasi2 from "../assets/bplj2.png";
 import BPLJDokumentasi3 from "../assets/bplj3.png";

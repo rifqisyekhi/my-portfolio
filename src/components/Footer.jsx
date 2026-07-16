@@ -11,23 +11,17 @@ export default function Footer() {
             Building digital experiences that make a difference.
           </p>
         </div>
+
         <div className="footer-column">
           <div className="footer-title neo-box-dark bg-cyan">Quick Links</div>
           <ul className="footer-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+
         <div className="footer-column">
           <div className="footer-title neo-box-dark bg-pink">Connect</div>
           <div className="social-icons">
@@ -36,7 +30,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="icon-btn neo-box-dark" aria-label="Github">
+              <button className="icon-btn neo-box-dark" aria-label="Github" style={{ fontFamily: "inherit" }}>
                 <FaGithub size={22} />
               </button>
             </a>
@@ -45,23 +39,23 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="icon-btn neo-box-dark" aria-label="Linkedin">
+              <button className="icon-btn neo-box-dark" aria-label="Linkedin" style={{ fontFamily: "inherit" }}>
                 <FaLinkedin size={22} />
               </button>
             </a>
             <a href="mailto:rifqisyekhi@gmail.com">
-              <button className="icon-btn neo-box-dark" aria-label="Email">
+              <button className="icon-btn neo-box-dark" aria-label="Email" style={{ fontFamily: "inherit" }}>
                 <MdOutlineEmail size={24} />
               </button>
             </a>
           </div>
         </div>
       </div>
+
       <div className="footer-bottom">
         <hr className="footer-divider" />
         <p>
-          © 2026 Syekhi Developer. All rights reserved. Built with React &
-          Tailwind CSS
+          © 2026 Syekhi Developer. All rights reserved. Built with React.
         </p>
       </div>
     </footer>

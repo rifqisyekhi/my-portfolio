@@ -2,6 +2,10 @@ import { useRef } from "react";
 import poster1 from "../assets/Poster1.png";
 import poster2 from "../assets/Poster2.png";
 
+// --- IMPORTS ICON ---
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { MdRemoveRedEye } from "react-icons/md";
+
 const designData = [
   {
     id: 1,
@@ -49,6 +53,19 @@ export default function DesignProjects() {
 
   return (
     <section className="projects-container" id="design-projects">
+      <style>{`
+        .carousel-controls {
+          display: flex;
+          gap: 10px;
+        }
+
+        .carousel-controls .arrow-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
+
       <div className="projects-header-area" style={{ marginBottom: "20px" }}>
         <h2
           className="section-title-large neo-box"
@@ -62,10 +79,10 @@ export default function DesignProjects() {
         </h2>
         <div className="carousel-controls">
           <button onClick={() => scroll("left")} className="neo-box arrow-btn">
-            ←
+            <BsArrowLeft />
           </button>
           <button onClick={() => scroll("right")} className="neo-box arrow-btn">
-            →
+            <BsArrowRight />
           </button>
         </div>
       </div>
@@ -85,7 +102,10 @@ export default function DesignProjects() {
                 rel="noopener noreferrer"
                 className={`btn-details ${item.btnColor} neo-box`}
                 style={{
-                  display: "inline-block",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "8px",
                   textDecoration: "none",
                   textAlign: "center",
                   color: "inherit",
@@ -94,7 +114,7 @@ export default function DesignProjects() {
                   fontWeight: "bold",
                 }}
               >
-                👁️ View HD Design
+                <MdRemoveRedEye size={20} /> View HD Design
               </a>
             </div>
             <div

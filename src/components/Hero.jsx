@@ -19,40 +19,46 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="action-buttons">
+        <div className="action-buttons" style={{ flexWrap: "wrap" }}>
           <a href="#contact" style={{ textDecoration: "none" }}>
             <button className="btn-primary neo-box">
               Get in touch <MdSend size={22} style={{ marginLeft: "8px" }} />
             </button>
           </a>
-          <a
-            href="https://github.com/rifqisyekhi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn-icon neo-box" aria-label="Github">
-              <FaGithub size={26} />
-            </button>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rifqisyekhi/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn-icon neo-box" aria-label="Linkedin">
-              <FaLinkedin size={26} />
-            </button>
-          </a>
-          <a href="mailto:rifqisyekhi@gmail.com">
-            <button className="btn-icon neo-box" aria-label="Email">
-              <MdOutlineEmail size={28} />
-            </button>
-          </a>
+          
+          {/* 👇 SOLUSINYA DI SINI: Membungkus ketiga ikon agar turun baris bersamaan 👇 */}
+          <div style={{ display: "flex", gap: "12px" }}>
+            <a
+              href="https://github.com/rifqisyekhi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-icon neo-box" aria-label="Github">
+                <FaGithub size={26} />
+              </button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rifqisyekhi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-icon neo-box" aria-label="Linkedin">
+                <FaLinkedin size={26} />
+              </button>
+            </a>
+            <a href="mailto:rifqisyekhi@gmail.com">
+              <button className="btn-icon neo-box" aria-label="Email">
+                <MdOutlineEmail size={28} />
+              </button>
+            </a>
+          </div>
+          {/* 👆 BATAS BUNGKUSAN 👆 */}
+
         </div>
       </div>
 
       <div className="hero-image-area">
-        <div className="photo-backdrop bg-kuning"></div>
+        <div className="photo-backdrop"></div>
         <div className="photo-frame neo-box">
           <img src={fotoProfil} alt="Rifqi Syekhi" className="profile-photo" />
         </div>

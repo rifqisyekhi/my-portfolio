@@ -38,7 +38,7 @@ export default function Skills() {
       </div>
       <div className="stats-banner neo-box">
         <div className="stat-item">
-          <div className="stat-number neo-box">1+</div>
+          <div className="stat-number neo-box">2+</div>
           <p>Years Experience</p>
         </div>
         <div className="stat-item">

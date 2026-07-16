@@ -13,7 +13,7 @@ export default function Contact() {
             <div className="contact-list">
               <div className="contact-item">
                 <div className="icon-box-small neo-box bg-cyan">✉</div>
-                <span>rifqisyekhi@gmail.com</span>
+                <span style={{ wordBreak: "break-all" }}>rifqisyekhi@gmail.com</span>
               </div>
               <div className="contact-item">
                 <div className="icon-box-small neo-box bg-yellow">📞</div>
@@ -29,28 +29,48 @@ export default function Contact() {
             💡 <strong>Currently available</strong> for freelance work and full-time opportunities!
           </div>
         </div>
+
         <div className="contact-form-card neo-box">
           <form className="form-elements">
-            
             <div className="input-group">
               <label>Name</label>
-              <input type="text" placeholder="Your name" className="neo-input" />
+              <input 
+                type="text" 
+                placeholder="Your name" 
+                className="neo-input" 
+                style={{ fontFamily: "inherit" }} // Memastikan font tidak berubah
+              />
             </div>
 
             <div className="input-group">
               <label>Email</label>
-              <input type="email" placeholder="your.email@example.com" className="neo-input" />
+              <input 
+                type="email" 
+                placeholder="your.email@example.com" 
+                className="neo-input" 
+                style={{ fontFamily: "inherit" }}
+              />
             </div>
 
             <div className="input-group">
               <label>Message</label>
-              <textarea placeholder="Tell me about your project..." className="neo-input textarea" rows="4"></textarea>
+              <textarea 
+                placeholder="Tell me about your project..." 
+                className="neo-input textarea" 
+                rows="4"
+                style={{ fontFamily: "inherit" }}
+              ></textarea>
             </div>
 
-            <button type="submit" className="btn-submit neo-box">Send Message</button>
+            <button 
+              type="submit" 
+              className="btn-submit neo-box"
+              style={{ fontFamily: "inherit", cursor: "pointer" }}
+            >
+              Send Message
+            </button>
           </form>
         </div>
-
       </div>
     </section>
   );

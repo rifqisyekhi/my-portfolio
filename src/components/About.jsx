@@ -2,14 +2,15 @@ export default function About() {
   return (
     <section className="about-container" id="about">
       <div className="section-title neo-box">About Me</div>
+      
       <div className="grid-top">
         <div className="card neo-box card-pale-green">
           <h3>My Journey</h3>
           <p>
-            As a recent fresh gradute from <strong>UIN Sunan Gunung DJati Bandung S1 Informatics Engineering</strong>, i've worked on various projects during my studies and though freelance work-ranging from simple website to comlplex appllications.
+            As a recent fresh graduate from <strong>UIN Sunan Gunung Djati Bandung S1 Informatics Engineering</strong>, I've worked on various projects during my studies and through freelance work—ranging from simple websites to complex applications.
           </p>
           <p>
-            I enjoy combining technical skills with creative problem solving to deliver effective and engaging solutions.
+            I enjoy combining technical skills with creative problem-solving to deliver effective and engaging solutions.
           </p>
         </div>
         <div className="card neo-box card-pale-yellow">
@@ -22,6 +23,7 @@ export default function About() {
           </ul>
         </div>
       </div>
+
       <div className="grid-bottom">
         <div className="card neo-box card-cyan">
           <div className="icon-box neo-box">&lt;/&gt;</div>

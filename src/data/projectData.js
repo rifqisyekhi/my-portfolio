@@ -1,5 +1,3 @@
-import gamewitcherCover from "../assets/GameWitcher.png";
-
 // SisKA Image
 import siskaCover from "../assets/siskacover.png";
 import siskaDokumentasi1 from "../assets/Siska1.png";
@@ -35,11 +33,14 @@ import RobloxStudioDokumentasi2 from "../assets/robloxstudio2.png";
 import RobloxStudioDokumentasi3 from "../assets/robloxstudio3.png";
 
 // Media Processor Image
-import MediaProcessorCover from "../assets/MediaProcessorCover.png";
-import MediaProcessorDokumentasi1 from "../assets/MediaProcessor1.png";
-import MediaProcessorDokumentasi2 from "../assets/MediaProcessor2.png";
-import MediaProcessorDokumentasi3 from "../assets/MediaProcessor3.png";
-import MediaProcessorDokumentasi4 from "../assets/MediaProcessor4.png";
+import MediaProcessorCover from "../assets/mediaProcessorCover.png";
+import MediaProcessorDokumentasi1 from "../assets/mediaProcessor1.png";
+import MediaProcessorDokumentasi2 from "../assets/mediaProcessor2.png";
+import MediaProcessorDokumentasi3 from "../assets/mediaProcessor3.png";
+import MediaProcessorDokumentasi4 from "../assets/mediaProcessor4.png";
+
+// Game Witcher Image
+import gamewitcherCover from "../assets/GameWitcher.png";
 
 export const projectData = [
   // SisKA Project

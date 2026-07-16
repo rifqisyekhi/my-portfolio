@@ -49,18 +49,23 @@ section {
   min-height: 100vh;
   background-color: var(--biru-muda);
 }
+
 .bg-white-section {
   background-color: var(--putih-krem);
 }
+
 .bg-skills-section {
   background-color: var(--kuning);
 }
+
 .bg-yellow-solid-section {
   background-color: var(--abu-muda);
 }
+
 .bg-contact-section {
   background-color: var(--merah);
 }
+
 .bg-footer-section {
   background-color: var(--biru-dongker);
 }
@@ -88,23 +93,28 @@ button.neo-box:active,
 .bg-pink {
   background-color: var(--merah);
 }
+
 .cyan,
 .bg-cyan {
   background-color: var(--biru-muda);
 }
+
 .yellow,
 .bg-yellow {
   background-color: var(--kuning-mustard);
 }
+
 .green,
 .bg-green {
   background-color: var(--hijau-teal);
 }
+
 .purple,
 .bg-purple {
   background-color: var(--biru-dongker);
   color: var(--putih-murni);
 }
+
 .blue,
 .bg-blue {
   background-color: var(--biru-sedang);
@@ -130,6 +140,7 @@ button.neo-box:active,
   align-items: center;
   gap: 40px;
 }
+
 .logo-custom {
   display: flex;
   align-items: center;
@@ -138,18 +149,22 @@ button.neo-box:active,
   font-weight: 900;
   letter-spacing: 1px;
 }
+
 .logo-text-plain {
   color: var(--hitam-garis);
 }
+
 .logo-text-box {
   background-color: var(--kuning);
   padding: 4px 10px;
   border: 3px solid var(--hitam-garis);
 }
+
 .nav-links-clean {
   display: flex;
   gap: 30px;
 }
+
 .nav-links-clean a {
   text-decoration: none;
   color: var(--hitam-garis);
@@ -157,9 +172,11 @@ button.neo-box:active,
   font-size: 1rem;
   transition: color 0.2s;
 }
+
 .nav-links-clean a:hover {
   color: var(--oranye);
 }
+
 .btn-lang {
   background-color: var(--biru-dongker);
   color: var(--putih-murni);
@@ -180,6 +197,7 @@ button.neo-box:active,
   max-width: 1440px;
   margin: 0 auto;
 }
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -187,23 +205,27 @@ button.neo-box:active,
   gap: 16px;
   flex: 1;
 }
+
 .badge {
   background-color: var(--kuning);
   padding: 8px 16px;
   font-weight: bold;
 }
+
 .title-name {
   background-color: var(--putih-murni);
   padding: 10px 24px;
   font-size: 2.2rem;
   letter-spacing: 2px;
 }
+
 .title-role {
   background-color: var(--biru-muda);
   padding: 10px 24px;
   font-size: 2.2rem;
   letter-spacing: 2px;
 }
+
 .description {
   background-color: var(--putih-murni);
   padding: 24px;
@@ -211,11 +233,13 @@ button.neo-box:active,
   line-height: 1.6;
   width: 100%;
 }
+
 .action-buttons {
   display: flex;
   gap: 12px;
   margin-top: 10px;
 }
+
 .btn-primary {
   background-color: var(--hijau-teal);
   color: var(--putih-murni);
@@ -228,6 +252,7 @@ button.neo-box:active,
   justify-content: center;
   gap: 8px;
 }
+
 .btn-icon {
   background-color: var(--putih-murni);
   width: 50px;
@@ -239,10 +264,12 @@ button.neo-box:active,
   color: var(--hitam-garis);
   transition: all 0.2s ease;
 }
+
 .btn-icon:hover {
   background-color: var(--biru-muda);
   color: var(--hitam-garis);
 }
+
 .hero-image-area {
   flex: 1;
   display: flex;
@@ -251,6 +278,7 @@ button.neo-box:active,
   position: relative;
   min-height: 400px;
 }
+
 .photo-backdrop {
   position: absolute;
   width: 100%;
@@ -261,6 +289,7 @@ button.neo-box:active,
   transform: rotate(6deg) translate(10px, 10px);
   z-index: 1;
 }
+
 .photo-frame {
   position: relative;
   width: 100%;
@@ -271,6 +300,7 @@ button.neo-box:active,
   transform: rotate(-3deg);
   z-index: 2;
 }
+
 .profile-photo {
   width: 100%;
   height: 100%;
@@ -286,6 +316,7 @@ button.neo-box:active,
   flex-direction: column;
   gap: 30px;
 }
+
 .section-title {
   background-color: var(--oranye);
   padding: 12px 24px;
@@ -293,33 +324,40 @@ button.neo-box:active,
   font-weight: bold;
   align-self: flex-start;
 }
+
 .grid-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+
 .grid-bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 .card {
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
+
 .card h4 {
   font-size: 1.2rem;
   margin-top: 10px;
 }
+
 .card p {
   line-height: 1.6;
 }
+
 .todo-list {
   list-style-type: square;
   padding-left: 20px;
@@ -328,6 +366,7 @@ button.neo-box:active,
   gap: 12px;
   line-height: 1.5;
 }
+
 .icon-box {
   background-color: var(--putih-murni);
   width: 50px;
@@ -338,18 +377,23 @@ button.neo-box:active,
   font-weight: bold;
   font-size: 1.2rem;
 }
+
 .card-pale-green {
   background-color: var(--abu-muda);
 }
+
 .card-pale-yellow {
   background-color: var(--putih-krem);
 }
+
 .card-cyan {
   background-color: var(--biru-muda);
 }
+
 .card-pink {
   background-color: var(--merah);
 }
+
 .card-yellow {
   background-color: var(--kuning-mustard);
 }
@@ -362,6 +406,7 @@ button.neo-box:active,
   flex-direction: column;
   gap: 40px;
 }
+
 .section-title-green {
   background-color: var(--hijau-teal);
   color: var(--putih-murni);
@@ -370,11 +415,13 @@ button.neo-box:active,
   font-weight: bold;
   align-self: flex-start;
 }
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 .skill-category {
   background-color: var(--putih-murni);
   display: flex;
@@ -382,24 +429,28 @@ button.neo-box:active,
   padding: 0;
   overflow: hidden;
 }
+
 .category-header {
   padding: 16px;
   font-weight: bold;
   font-size: 1.1rem;
   border-bottom: 3px solid var(--hitam-garis);
 }
+
 .category-body {
   padding: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
+
 .skill-tag {
   background-color: var(--putih-murni);
   padding: 8px 16px;
   font-size: 0.9rem;
   font-weight: 500;
 }
+
 .stats-banner {
   background-color: var(--oranye);
   padding: 40px;
@@ -408,12 +459,14 @@ button.neo-box:active,
   align-items: center;
   text-align: center;
 }
+
 .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
+
 .stat-number {
   background-color: var(--putih-murni);
   padding: 12px 20px;
@@ -432,6 +485,7 @@ button.neo-box:active,
   flex-direction: column;
   gap: 40px;
 }
+
 .section-title-cyan {
   background-color: var(--biru-muda);
   padding: 12px 24px;
@@ -439,6 +493,7 @@ button.neo-box:active,
   font-weight: bold;
   align-self: flex-start;
 }
+
 .section-title-pink {
   background-color: var(--kuning-mustard);
   padding: 12px 24px;
@@ -446,15 +501,18 @@ button.neo-box:active,
   font-weight: bold;
   align-self: flex-start;
 }
+
 .projects-header-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .carousel-controls {
   display: flex;
   gap: 16px;
 }
+
 .arrow-btn {
   background-color: var(--kuning);
   width: 50px;
@@ -467,6 +525,7 @@ button.neo-box:active,
   align-items: center;
   padding: 0;
 }
+
 .projects-scroll-container {
   display: flex;
   gap: 30px;
@@ -476,12 +535,14 @@ button.neo-box:active,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .projects-scroll-container::after {
   content: "";
   display: block;
   flex: 0 0 1px;
   margin-right: 15px;
 }
+
 .projects-scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -496,20 +557,24 @@ button.neo-box:active,
   position: relative;
   z-index: 1;
 }
+
 .project-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-bottom: 3px solid var(--hitam-garis);
 }
+
 .project-header {
   padding: 16px 20px;
   border-bottom: 3px solid var(--hitam-garis);
 }
+
 .project-header h3 {
   margin: 0;
   font-size: 1.2rem;
 }
+
 .project-body {
   padding: 24px;
   display: flex;
@@ -517,23 +582,27 @@ button.neo-box:active,
   flex: 1;
   gap: 20px;
 }
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: auto;
 }
+
 .tech-tag {
   background-color: var(--putih-murni);
   padding: 6px 12px;
   font-size: 0.8rem;
   font-weight: bold;
 }
+
 .project-actions {
   display: flex;
   gap: 16px;
   margin-top: 10px;
 }
+
 .btn-code,
 .btn-live {
   flex: 1;
@@ -546,9 +615,11 @@ button.neo-box:active,
   align-items: center;
   gap: 8px;
 }
+
 .btn-code {
   background-color: var(--putih-murni);
 }
+
 .btn-live {
   background-color: var(--hijau-teal);
   color: var(--putih-murni);
@@ -558,6 +629,7 @@ button.neo-box:active,
   display: flex;
   justify-content: center;
 }
+
 .section-title-large {
   background-color: var(--putih-murni);
   padding: 16px 40px;
@@ -565,11 +637,13 @@ button.neo-box:active,
   font-weight: 900;
   letter-spacing: 2px;
 }
+
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 .cert-card {
   background-color: var(--putih-murni);
   padding: 20px;
@@ -578,11 +652,13 @@ button.neo-box:active,
   gap: 20px;
   flex: 0 0 calc((100% - 60px) / 3);
 }
+
 .cert-image-wrapper {
   border: 2px solid var(--hitam-garis);
   padding: 10px;
   background-color: var(--putih-krem);
 }
+
 .cert-image {
   width: 100%;
   height: auto;
@@ -590,6 +666,7 @@ button.neo-box:active,
   object-fit: cover;
   border: 1px solid var(--abu-muda);
 }
+
 .btn-details {
   padding: 16px;
   font-size: 1.1rem;
@@ -605,16 +682,19 @@ button.neo-box:active,
   padding-top: 120px;
   margin-top: -40px;
 }
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
+
 .contact-info-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .info-card {
   background-color: var(--putih-murni);
   padding: 30px;
@@ -622,25 +702,30 @@ button.neo-box:active,
   flex-direction: column;
   gap: 20px;
 }
+
 .intro-text {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .desc-text {
   line-height: 1.6;
 }
+
 .contact-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 10px;
 }
+
 .contact-item {
   display: flex;
   align-items: center;
   gap: 16px;
   font-weight: 500;
 }
+
 .icon-box-small {
   width: 40px;
   height: 40px;
@@ -649,30 +734,36 @@ button.neo-box:active,
   align-items: center;
   font-size: 1.2rem;
 }
+
 .availability-banner {
   background-color: var(--hijau-teal);
   color: var(--putih-murni);
   padding: 20px;
   font-size: 1.05rem;
 }
+
 .contact-form-card {
   background-color: var(--putih-murni);
   padding: 30px;
 }
+
 .form-elements {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .input-group label {
   font-weight: bold;
   font-size: 0.95rem;
 }
+
 .neo-input {
   padding: 12px 16px;
   font-size: 1rem;
@@ -682,13 +773,16 @@ button.neo-box:active,
   outline: none;
   transition: all 0.2s ease;
 }
+
 .neo-input:focus {
   box-shadow: 2px 2px 0px var(--hitam-garis);
   transform: translate(2px, 2px);
 }
+
 .textarea {
   resize: vertical;
 }
+
 .btn-submit {
   background-color: var(--biru-sedang);
   color: var(--putih-murni);
@@ -704,6 +798,7 @@ button.neo-box:active,
   color: var(--putih-krem);
   padding: 60px 40px 30px 40px;
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -712,26 +807,31 @@ button.neo-box:active,
   gap: 40px;
   flex-wrap: wrap;
 }
+
 .footer-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 300px;
 }
+
 .logo-dark {
   padding: 8px 16px;
   font-weight: bold;
   font-size: 1.2rem;
   align-self: flex-start;
 }
+
 .brand-text {
   line-height: 1.6;
 }
+
 .footer-title {
   padding: 8px 16px;
   font-weight: bold;
   align-self: flex-start;
 }
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -739,18 +839,22 @@ button.neo-box:active,
   flex-direction: column;
   gap: 12px;
 }
+
 .footer-links a {
   color: var(--putih-krem);
   text-decoration: none;
 }
+
 .footer-links a:hover {
   text-decoration: underline;
   color: var(--biru-muda);
 }
+
 .social-icons {
   display: flex;
   gap: 16px;
 }
+
 .icon-btn {
   background-color: var(--putih-murni);
   width: 45px;
@@ -763,16 +867,19 @@ button.neo-box:active,
   transition: all 0.2s ease;
   padding: 0;
 }
+
 .footer-bottom {
   max-width: 1200px;
   margin: 40px auto 0 auto;
   text-align: center;
 }
+
 .footer-divider {
   border: none;
   border-top: 2px solid var(--abu-muda);
   margin-bottom: 20px;
 }
+
 .footer-bottom p {
   font-size: 0.9rem;
   color: var(--abu-muda);
@@ -786,6 +893,7 @@ button.neo-box:active,
   min-height: 400px;
   overflow: hidden;
 }
+
 .design-content {
   flex: 1;
   padding: 40px;
@@ -794,12 +902,14 @@ button.neo-box:active,
   gap: 20px;
   border-right: 3px solid var(--hitam-garis);
 }
+
 .design-title {
   font-size: 2.5rem;
   font-weight: 900;
   color: var(--biru-dongker);
   margin-bottom: 10px;
 }
+
 .design-desc {
   display: flex;
   flex-direction: column;
@@ -808,12 +918,14 @@ button.neo-box:active,
   line-height: 1.6;
   color: #333;
 }
+
 .design-image-area {
   flex: 1;
   background-color: var(--putih-krem);
   position: relative;
   min-height: 400px;
 }
+
 .design-poster {
   position: absolute;
   top: 0;
@@ -837,23 +949,28 @@ button.neo-box:active,
   flex: 0 0 calc((100% - 60px) / 3) !important;
   min-width: auto !important;
 }
+
 .photo-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border: 3px solid var(--hitam-garis);
 }
+
 .photo-caption {
   font-weight: bold;
   text-align: center;
   font-size: 0.9rem;
 }
+
 .photo-card:nth-child(even) {
   transform: rotate(3deg);
 }
+
 .photo-card:nth-child(odd) {
   transform: rotate(-2deg);
 }
+
 .photo-card:hover {
   transform: rotate(0deg) scale(1.05) translateY(-5px) !important;
   z-index: 10;
@@ -866,6 +983,7 @@ button.neo-box:active,
     transform 0.2s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
+
 .project-card:hover,
 .cert-card:hover,
 .card:hover {
@@ -879,10 +997,12 @@ button.neo-box:active,
     transform: translateY(50px);
     opacity: 0;
   }
+
   70% {
     transform: translateY(-10px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -910,25 +1030,37 @@ button.neo-box:active,
 }
 
 @keyframes circleExpand {
-  0% { clip-path: circle(0% at 50% 50%); }
-  100% { clip-path: circle(150% at 50% 50%); }
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(150% at 50% 50%);
+  }
 }
 
 @keyframes circleShrink {
-  0% { clip-path: circle(150% at 50% 50%); }
-  100% { clip-path: circle(0% at 50% 50%); }
+  0% {
+    clip-path: circle(150% at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(0% at 50% 50%);
+  }
 }
 
 .title-name,
 .title-role {
   animation: brutalSlideUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
 .description,
 .action-buttons {
   opacity: 0;
   animation: brutalSlideUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.2s;
 }
+
 .hero-image-area {
   opacity: 0;
   animation: brutalSlideUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
@@ -987,13 +1119,16 @@ button.neo-box:active,
    MEDIA QUERY HP (WAJIB PALING BAWAH)
    ========================================= */
 @media (max-width: 768px) {
+
   /* Mengatur Navigasi Mobile */
   .desktop-nav {
     display: none !important;
   }
+
   .mobile-menu-btn {
     display: flex !important;
   }
+
   .mobile-nav-menu {
     display: flex;
   }
@@ -1014,6 +1149,7 @@ button.neo-box:active,
     padding: 120px 20px 40px 20px !important;
     gap: 40px;
   }
+
   .title-name,
   .title-role {
     font-size: 1.5rem !important;
@@ -1021,10 +1157,12 @@ button.neo-box:active,
     white-space: normal;
     word-wrap: break-word;
   }
+
   .description {
     font-size: 1rem !important;
     padding: 16px !important;
   }
+
   .photo-backdrop,
   .photo-frame {
     max-width: 100%;
@@ -1036,6 +1174,7 @@ button.neo-box:active,
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
   .stats-banner {
     flex-direction: column;
     gap: 30px;
@@ -1050,10 +1189,12 @@ button.neo-box:active,
     gap: 10px;
     width: 100%;
   }
+
   .carousel-controls {
     display: flex !important;
     gap: 10px;
   }
+
   .arrow-btn {
     width: 40px !important;
     height: 40px !important;
@@ -1065,6 +1206,7 @@ button.neo-box:active,
     scroll-snap-type: x mandatory;
     padding-right: 20px;
   }
+
   .certificates-grid {
     display: flex !important;
     flex-direction: row !important;
@@ -1074,6 +1216,7 @@ button.neo-box:active,
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .certificates-grid::-webkit-scrollbar {
     display: none !important;
   }
@@ -1091,6 +1234,7 @@ button.neo-box:active,
     flex-direction: column !important;
     gap: 10px !important;
   }
+
   .btn-code,
   .btn-live {
     width: 100% !important;
@@ -1103,6 +1247,7 @@ button.neo-box:active,
     max-width: 85vw !important;
     scroll-snap-align: center !important;
   }
+
   .design-content {
     border-right: none !important;
     border-bottom: 3px solid var(--hitam-garis) !important;
@@ -1110,16 +1255,19 @@ button.neo-box:active,
     width: 100% !important;
     box-sizing: border-box !important;
   }
+
   .design-title {
     font-size: 1.4rem !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     word-break: normal !important;
   }
+
   .design-image-area {
     min-height: 300px !important;
     width: 100% !important;
   }
+
   .design-poster {
     padding: 15px !important;
   }
@@ -1127,6 +1275,7 @@ button.neo-box:active,
   .nav-links-clean {
     display: none;
   }
+
   .navbar-container {
     padding: 16px 20px;
   }
@@ -1145,12 +1294,14 @@ button.neo-box:active,
     padding: 20px !important;
     box-sizing: border-box !important;
   }
+
   .contact-item {
     align-items: flex-start !important;
     overflow-wrap: break-word !important;
     word-break: break-word !important;
     width: 100%;
   }
+
   .neo-input,
   .textarea,
   .btn-submit {
@@ -1168,5 +1319,5 @@ button.neo-box:active,
     margin: 0 !important;
   }
 
-  
+
 }

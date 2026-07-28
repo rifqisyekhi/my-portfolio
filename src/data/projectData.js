@@ -118,7 +118,7 @@ export const projectData = [
   },
   // Roblox Studio Project
   {
-    id: "expedition-1001-curug",
+    id: "roblox-projects",
     title: "Roblox Studio Game Projects",
     cover: RobloxStudioCover,
     gallery: [ 

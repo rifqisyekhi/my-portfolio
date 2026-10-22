@@ -26,6 +26,15 @@ import SamariaDokumentasi4 from "../assets/samaria4.png";
 import SamariaDokumentasi5 from "../assets/samaria5.png";
 import SamariaDokumentasi6 from "../assets/samaria6.png";
 
+// Sozo Skin Clinic Image
+import SozoCover from "../assets/sozoCover.png";
+import SozoDokumentasi1 from "../assets/sozo1.png";
+import SozoDokumentasi2 from "../assets/sozo2.png";
+import SozoDokumentasi3 from "../assets/sozo3.png";
+import SozoDokumentasi4 from "../assets/sozo4.png";
+import SozoDokumentasi5 from "../assets/sozo5.png";
+import SozoDokumentasi6 from "../assets/sozo6.png";
+
 // Roblox Studio Image
 import RobloxStudioCover from "../assets/Roblox1cover.png";
 import RobloxStudioDokumentasi1 from "../assets/robloxstudio1.png";
@@ -114,6 +123,29 @@ export const projectData = [
     live: "https://samaria-restaurant-app.vercel.app/",
     role: "Fullstack Developer",
     systemOverview: "Samaria Restaurant App adalah aplikasi web pemesanan makanan berbasis mobile yang dirancang untuk memudahkan pelanggan memesan makanan di restoran, baik untuk dine-in maupun take-away. Pelanggan dapat memilih menu, menambahkan pesanan ke keranjang, lalu melakukan pembayaran di kasir atau melalui QRIS dengan alur yang cepat dan mudah.\n\nSelain aplikasi untuk pelanggan, sistem ini juga dilengkapi dengan dashboard kasir untuk mengelola transaksi dan melihat laporan penjualan, dashboard gudang untuk mengelola stok bahan dan persediaan, serta dashboard dapur untuk menerima pesanan yang masuk dan melihat riwayat pesanan. Dibangun menggunakan React.js dan Tailwind CSS, aplikasi ini berfokus pada pengalaman pengguna yang modern, responsif, dan membantu operasional restoran menjadi lebih efisien.\n\nProject ini dikembangkan secara kolaboratif. UI/UX Design dan System Analysis dikerjakan oleh Amanda Salsabila, Nabila Oktaviansyah, Magali Ilana Meta, Inaya Aidella, dan Saqilla Nur Alaida, yang bertanggung jawab atas desain antarmuka, wireframe, flowchart, dan ERD sebagai bagian dari Tugas Akhir Semester mereka.",
+    systemAnalyst: ""
+  },
+  // Sozo Skin Clinic Project
+  {
+    id: "sozo-skin-clinic",
+    title: "Sozo Skin Clinic Website",
+    cover: SozoCover,
+    gallery: [
+      SozoDokumentasi1,
+      SozoDokumentasi2,
+      SozoDokumentasi3,
+      SozoDokumentasi4,
+      SozoDokumentasi5,
+      SozoDokumentasi6
+    ],
+    bgColor: "#1a2080",
+    textColor: "#ffffff",
+    shortDesc: "Website klinik kecantikan multi-halaman dengan katalog treatment, promo, pencarian cabang, dan reservasi via WhatsApp.",
+    tech: ["HTML/CSS", "JavaScript", "Tailwind CSS", "Vite"],
+    github: "https://github.com/rifqisyekhi/sozo-clinic",
+    live: "https://sozo-clinic.vercel.app/",
+    role: "Frontend Developer",
+    systemOverview: "Sozo Skin Clinic Website adalah replika frontend dari website resmi Sozo Skin Clinic, sebuah klinik kecantikan dengan puluhan cabang di Indonesia. Website ini terdiri dari beberapa halaman, yaitu Beranda, Treatment, Promo, Lokasi, Tentang Kami, dan Tim Dokter, dengan tampilan yang responsif untuk desktop maupun mobile.\n\nFitur yang dibuat antara lain header sticky dengan mega-menu dan drawer mobile, hero slider before/after, filter dan pencarian treatment berdasarkan kategori maupun keluhan, pencarian cabang klinik per nama/provinsi/kota, FAQ accordion, serta tombol reservasi yang langsung terhubung ke WhatsApp dengan pesan otomatis. Dibangun menggunakan Vite, Tailwind CSS v4, dan JavaScript murni tanpa framework, dengan seluruh konten dipisahkan ke dalam file data agar mudah dikelola.",
     systemAnalyst: ""
   },
   // Roblox Studio Project

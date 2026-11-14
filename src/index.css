@@ -1913,3 +1913,52 @@ button.lightbox-arrow:active {
     hyphens: auto;
   }
 }
+
+/* --- Responsive --- */
+/* Tombol & form tidak mewarisi font secara default */
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Menu desktop tidak muat di tablet/laptop kecil, pakai hamburger */
+@media (max-width: 1100px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .mobile-nav-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image-area {
+    width: 100%;
+  }
+
+  .photo-backdrop,
+  .photo-frame {
+    max-width: min(380px, 85%);
+  }
+
+  .projects-header-area h2.section-title-compact {
+    font-size: 1rem !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-container {
+    padding: 12px 16px;
+  }
+
+  .logo-custom {
+    font-size: 1.1rem;
+  }
+}

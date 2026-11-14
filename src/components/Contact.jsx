@@ -1,5 +1,7 @@
 import { profile } from "../data/profile";
 
+const [emailUser, emailDomain] = profile.email.split("@");
+
 export default function Contact() {
   // Belum ada backend, jadi pesan dikirim lewat aplikasi email pengunjung
   const handleSubmit = (e) => {
@@ -25,8 +27,9 @@ export default function Contact() {
             <div className="contact-list">
               <div className="contact-item">
                 <div className="icon-box-small neo-box bg-cyan">✉</div>
-                <a href={`mailto:${profile.email}`} className="contact-link" style={{ wordBreak: "break-all" }}>
-                  {profile.email}
+                {/* <wbr> agar email terpotong setelah "@" bila tidak muat */}
+                <a href={`mailto:${profile.email}`} className="contact-link">
+                  {emailUser}@<wbr />{emailDomain}
                 </a>
               </div>
               <div className="contact-item">

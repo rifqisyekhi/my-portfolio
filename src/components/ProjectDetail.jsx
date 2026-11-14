@@ -55,12 +55,7 @@ export default function ProjectDetail() {
     e.preventDefault();
     setIsExiting(true);
 
-    setTimeout(() => {
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
-    }, 500);
+    setTimeout(() => navigate("/", { state: { scrollTo: "projects" } }), 500);
   };
 
   const scrollGallery = (direction, targetRef) => {

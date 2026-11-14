@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,6 +13,18 @@ import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
 
 const MainContent = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const scrollTarget = location.state?.scrollTo;
+
+  // Datang dari halaman lain dengan tujuan section tertentu (navbar/footer/Return to Vault)
+  useEffect(() => {
+    if (!scrollTarget) return;
+    document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "instant" });
+    // Hapus state agar refresh tidak scroll ulang
+    navigate(location.pathname, { replace: true, state: null });
+  }, [scrollTarget, location.pathname, navigate]);
+
   return (
     <>
       <div className="bg-hero-section">

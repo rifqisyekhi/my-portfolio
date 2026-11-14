@@ -13,8 +13,8 @@ export default function useSectionNav() {
     if (location.pathname === "/") {
       scrollToSection();
     } else {
-      navigate("/");
-      setTimeout(scrollToSection, 100);
+      // Halaman utama yang akan scroll ke section setelah selesai dirender (lihat App.jsx)
+      navigate("/", { state: { scrollTo: targetId } });
     }
   };
 }

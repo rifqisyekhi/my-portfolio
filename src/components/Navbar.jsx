@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import useSectionNav from "../hooks/useSectionNav";
 import { profile } from "../data/profile";
@@ -15,6 +15,22 @@ const navLinks = [
 export default function Navbar() {
   const goToSection = useSectionNav();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
+  // Tutup menu mobile saat tap di luar navbar atau saat halaman di-scroll
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const close = () => setIsMobileMenuOpen(false);
+    const handlePointerDown = (e) => {
+      if (!navRef.current?.contains(e.target)) close();
+    };
+    document.addEventListener("pointerdown", handlePointerDown);
+    window.addEventListener("scroll", close, { passive: true });
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      window.removeEventListener("scroll", close);
+    };
+  }, [isMobileMenuOpen]);
 
   const handleNavClick = (e, targetId) => {
     setIsMobileMenuOpen(false);
@@ -39,7 +55,7 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="navbar-container">
+    <nav className="navbar-container" ref={navRef}>
       <div className="logo-custom">
         <span className="logo-text-plain">RIFQI</span>
         <span className="logo-text-box">SYEKHI</span>

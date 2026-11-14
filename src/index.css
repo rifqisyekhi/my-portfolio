@@ -1078,6 +1078,7 @@ button.neo-box:active,
 
 .mobile-nav-menu {
   display: none;
+  animation: menuDrop 0.2s cubic-bezier(0.25, 1, 0.5, 1);
   position: absolute;
   top: 85px;
   right: 20px;
@@ -1385,7 +1386,9 @@ button.neo-box:active,
   scroll-snap-type: x mandatory !important;
   scroll-behavior: smooth !important;
   gap: 30px !important;
-  padding: 0 !important; /* Paksa 0 agar math 100% tidak bocor */
+  /* Ruang agar kartu miring & efek hover tidak terpotong */
+  padding: 20px 16px 30px !important;
+  scroll-padding-inline: 16px;
   margin: 0 !important;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1397,9 +1400,6 @@ button.neo-box:active,
 
 .gallery-container .photo-card {
   scroll-snap-align: start !important;
-  transform: translateZ(0) !important;
-  will-change: transform !important;
-  backface-visibility: hidden !important;
   box-sizing: border-box !important;
   margin: 0 !important;
   min-width: 0 !important;
@@ -1538,7 +1538,9 @@ section#projects .project-card.neo-box:active {
   scroll-snap-type: x mandatory !important;
   scroll-behavior: smooth !important;
   gap: 30px !important;
-  padding: 0 !important;
+  /* Ruang agar efek hover (naik + bayangan) tidak terpotong */
+  padding: 12px 8px 20px !important;
+  scroll-padding-inline: 8px;
   margin: 0 !important;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1550,9 +1552,6 @@ section#projects .project-card.neo-box:active {
 
 .certificates-container .cert-card {
   scroll-snap-align: start !important;
-  transform: translateZ(0) !important;
-  will-change: transform !important;
-  backface-visibility: hidden !important;
   box-sizing: border-box !important;
   margin: 0 !important;
   min-width: 0 !important;
@@ -1960,5 +1959,33 @@ textarea {
 
   .logo-custom {
     font-size: 1.1rem;
+  }
+}
+
+@keyframes menuDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hormati pengaturan "kurangi animasi" di perangkat pengunjung */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

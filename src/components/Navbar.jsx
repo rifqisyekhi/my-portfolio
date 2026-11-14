@@ -1,47 +1,45 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi"; // Menggunakan icon untuk Hamburger Menu
+import { FiMenu, FiX } from "react-icons/fi";
+import useSectionNav from "../hooks/useSectionNav";
+import { profile } from "../data/profile";
+
+const navLinks = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "certificates", label: "Certificates" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const goToSection = useSectionNav();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleNavClick = (e, targetId) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false); // Menutup menu mobile otomatis saat link diklik
-
-    if (location.pathname === "/") {
-      // Jika sedang di halaman utama, langsung scroll
-      const section = document.getElementById(targetId);
-      if (section) section.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Jika di halaman detail, pulang dulu baru scroll
-      navigate("/");
-      setTimeout(() => {
-        const section = document.getElementById(targetId);
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      }, 100); 
-    }
+    setIsMobileMenuOpen(false);
+    goToSection(e, targetId);
   };
+
+  const links = navLinks.map((link) => (
+    <a key={link.id} href={`#${link.id}`} onClick={(e) => handleNavClick(e, link.id)}>
+      {link.label}
+    </a>
+  ));
+
+  const resumeButton = (
+    <a
+      href={profile.resume}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-lang neo-box btn-resume-nav"
+    >
+      Resume
+    </a>
+  );
 
   return (
     <nav className="navbar-container">
-      <style>{`
-        .btn-resume-nav {
-          text-decoration: none; 
-          color: #ffffff; 
-          display: inline-block; 
-          text-align: center;
-          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        }
-        
-        .btn-resume-nav:hover {
-          background-color: #ff6b6b !important;
-          color: #ffffff !important;
-        }
-      `}</style>
-
       <div className="logo-custom">
         <span className="logo-text-plain">RIFQI</span>
         <span className="logo-text-box">SYEKHI</span>
@@ -49,30 +47,17 @@ export default function Navbar() {
 
       {/* --- DESKTOP NAVIGATION --- */}
       <div className="navbar-right desktop-nav">
-        <div className="nav-links-clean">
-          <a href="#home" onClick={(e) => handleNavClick(e, "home")}>Home</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, "about")}>About</a>
-          <a href="#skills" onClick={(e) => handleNavClick(e, "skills")}>Skills</a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>Projects</a>
-          <a href="#certificates" onClick={(e) => handleNavClick(e, "certificates")}>Certificates</a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>Contact</a>
-        </div>
-
-        <a
-          href="https://drive.google.com/file/d/1XSZQ8uTUZd-ID4qDsUvAY81ElYRjqm4R/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-lang neo-box btn-resume-nav"
-        >
-          Resume
-        </a>
+        <div className="nav-links-clean">{links}</div>
+        {resumeButton}
       </div>
 
       {/* --- MOBILE HAMBURGER BUTTON --- */}
-      <button 
+      <button
+        type="button"
         className="mobile-menu-btn neo-box"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle Navigation"
+        aria-expanded={isMobileMenuOpen}
       >
         {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
       </button>
@@ -80,22 +65,8 @@ export default function Navbar() {
       {/* --- MOBILE DROPDOWN MENU --- */}
       {isMobileMenuOpen && (
         <div className="mobile-nav-menu neo-box">
-          <a href="#home" onClick={(e) => handleNavClick(e, "home")}>Home</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, "about")}>About</a>
-          <a href="#skills" onClick={(e) => handleNavClick(e, "skills")}>Skills</a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>Projects</a>
-          <a href="#certificates" onClick={(e) => handleNavClick(e, "certificates")}>Certificates</a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>Contact</a>
-          
-          <a
-            href="https://drive.google.com/file/d/1XSZQ8uTUZd-ID4qDsUvAY81ElYRjqm4R/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-lang neo-box btn-resume-nav"
-            style={{ marginTop: "10px" }}
-          >
-            Resume
-          </a>
+          {links}
+          {resumeButton}
         </div>
       )}
     </nav>

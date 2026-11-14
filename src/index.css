@@ -78,7 +78,9 @@ section {
 }
 
 button.neo-box:active,
-.icon-btn:active {
+.icon-btn:active,
+.btn-icon:active,
+.btn-primary:active {
   box-shadow: 2px 2px 0px var(--hitam-garis);
   transform: translate(3px, 3px);
 }
@@ -251,6 +253,7 @@ button.neo-box:active,
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .btn-icon {
@@ -262,6 +265,7 @@ button.neo-box:active,
   justify-content: center;
   align-items: center;
   color: var(--hitam-garis);
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
@@ -510,7 +514,7 @@ button.neo-box:active,
 
 .carousel-controls {
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
 
 .arrow-btn {
@@ -520,7 +524,7 @@ button.neo-box:active,
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -608,26 +612,24 @@ button.neo-box:active,
   flex: 1;
   padding: 12px;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .btn-code {
   background-color: var(--putih-murni);
+  color: var(--hitam-garis);
 }
 
 .btn-live {
   background-color: var(--hijau-teal);
   color: var(--putih-murni);
-}
-
-.title-wrapper {
-  display: flex;
-  justify-content: center;
 }
 
 .section-title-large {
@@ -636,12 +638,6 @@ button.neo-box:active,
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 2px;
-}
-
-.certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
 }
 
 .cert-card {
@@ -662,6 +658,7 @@ button.neo-box:active,
 .cert-image {
   width: 100%;
   height: auto;
+  display: block;
   aspect-ratio: 4/3;
   object-fit: cover;
   border: 1px solid var(--abu-muda);
@@ -923,7 +920,7 @@ button.neo-box:active,
   flex: 1;
   background-color: var(--putih-krem);
   position: relative;
-  min-height: 400px;
+  min-height: 450px;
 }
 
 .design-poster {
@@ -951,6 +948,7 @@ button.neo-box:active,
 }
 
 .photo-card img {
+  display: block;
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -1107,7 +1105,6 @@ button.neo-box:active,
 
 /* --- FIX FLEXBOX RIGHT PADDING BUG --- */
 .projects-scroll-container::after,
-.certificates-grid::after,
 .detail-gallery-container::after {
   content: "";
   display: block;
@@ -1180,8 +1177,7 @@ button.neo-box:active,
     gap: 30px;
   }
 
-  .projects-header-area,
-  .title-wrapper {
+  .projects-header-area {
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -1201,24 +1197,9 @@ button.neo-box:active,
     font-size: 1.2rem !important;
   }
 
-  .projects-scroll-container,
-  .certificates-grid {
+  .projects-scroll-container {
     scroll-snap-type: x mandatory;
     padding-right: 20px;
-  }
-
-  .certificates-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    padding-bottom: 20px !important;
-    gap: 30px !important;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .certificates-grid::-webkit-scrollbar {
-    display: none !important;
   }
 
   .project-card,
@@ -1318,6 +1299,617 @@ button.neo-box:active,
     white-space: normal !important;
     margin: 0 !important;
   }
+}
 
+/* =========================================
+   STYLE KOMPONEN
+   (dulu berupa <style> inline di tiap komponen;
+   sengaja diletakkan setelah media query agar urutan cascade tetap sama)
+   ========================================= */
 
+/* --- Utilitas --- */
+.bg-orange {
+  background-color: var(--oranye);
+}
+
+.bg-mint {
+  background-color: #a8e6cf;
+}
+
+.section-title-yellow {
+  background-color: var(--kuning-mustard);
+}
+
+.section-header-compact {
+  margin-bottom: 20px;
+}
+
+.section-title-compact {
+  padding: 12px 24px;
+  font-size: 2rem;
+}
+
+.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+/* --- Navbar --- */
+.btn-resume-nav {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn-resume-nav:hover {
+  background-color: #ff6b6b !important;
+  color: #ffffff !important;
+}
+
+.mobile-nav-menu .btn-resume-nav {
+  margin-top: 10px;
+}
+
+/* --- Hero --- */
+.action-buttons {
+  flex-wrap: wrap;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Footer --- */
+.icon-btn {
+  color: var(--hitam-garis);
+  text-decoration: none;
+}
+
+/* --- Contact --- */
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Documentation --- */
+.gallery-container .projects-scroll-container {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-behavior: smooth !important;
+  gap: 30px !important;
+  padding: 0 !important; /* Paksa 0 agar math 100% tidak bocor */
+  margin: 0 !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gallery-container .projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-container .photo-card {
+  scroll-snap-align: start !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  flex: 0 0 calc((100% - 60px) / 3) !important;
+}
+
+.gallery-container .photo-card:last-child {
+  margin-right: 30px !important;
+}
+
+/* --- Projects --- */
+.projects-scroll-container {
+  scroll-snap-type: x mandatory;
+  padding-right: 30px !important;
+}
+
+.project-card {
+  scroll-snap-align: start;
+  justify-content: space-between;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+section#projects .project-card.neo-box {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out !important;
+}
+
+section#projects .project-card.neo-box:hover {
+  transform: translate(-4px, -4px) !important;
+  box-shadow: 8px 8px 0px #000 !important;
+}
+
+section#projects .project-card.neo-box:active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 0px 0px 0px #000 !important;
+}
+
+.project-card:last-child {
+  margin-right: 30px !important;
+}
+
+.project-main-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-image {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.project-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.project-main-link .project-body {
+  padding-bottom: 5px;
+}
+
+.project-actions-wrapper {
+  padding: 0 20px 20px 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.neo-arrow-icon {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.2s ease-in-out;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-main-link:hover .neo-arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover tombol aksi (dipakai di Projects & Project Detail) */
+.hover-btn-code,
+.hover-btn-live,
+.hover-btn-design {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hover-btn-code:hover {
+  background-color: #ffd700 !important;
+  color: #111111 !important;
+}
+
+.hover-btn-live:hover {
+  background-color: #ff6b6b !important;
+  color: #ffffff !important;
+}
+
+.hover-btn-design:hover {
+  background-color: #ff90e8 !important;
+  color: #000 !important;
+}
+
+/* --- Design Projects & Certificates --- */
+.design-content .btn-details {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cert-card .btn-details {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.certificates-container .projects-scroll-container {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-behavior: smooth !important;
+  gap: 30px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.certificates-container .projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.certificates-container .cert-card {
+  scroll-snap-align: start !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  flex: 0 0 calc((100% - 60px) / 3) !important;
+}
+
+@media (max-width: 1024px) {
+  .gallery-container .photo-card,
+  .certificates-container .cert-card {
+    flex: 0 0 calc((100% - 30px) / 2) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container .photo-card,
+  .certificates-container .cert-card {
+    flex: 0 0 100% !important;
+  }
+}
+
+/* --- Modal (Live links) & Lightbox --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-overlay-dark {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-card {
+  position: relative;
+  animation: scaleUp 0.2s ease-out;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 35px 25px 30px;
+  border: 4px solid #000;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.modal-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  z-index: 10002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.live-modal-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding: 12px 20px;
+  background: #fff;
+  font-weight: bold;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.live-modal-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000 !important;
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.lightbox-content {
+  position: relative;
+  animation: scaleUp 0.2s ease-out;
+  max-width: 80%;
+  max-height: 90vh;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 0;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ffd700;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.lightbox-arrow:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+button.lightbox-arrow:active {
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: -65px;
+}
+
+.lightbox-next {
+  right: -65px;
+}
+
+/* --- Project Detail --- */
+.project-detail-page {
+  padding: 120px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.project-not-found {
+  padding: 120px 20px 100px;
+  text-align: center;
+  position: relative;
+}
+
+.project-not-found-title {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: #ff6b6b;
+}
+
+.detail-back-link {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detail-header {
+  margin-bottom: 30px;
+}
+
+.detail-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-header .detail-title-row {
+  margin: 20px 0;
+}
+
+.detail-title {
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 1.8rem;
+}
+
+.detail-gallery-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0;
+  background: #fff;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.detail-gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
+.detail-gallery-image {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: none;
+  cursor: zoom-in;
+}
+
+.detail-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-actions-detail {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.detail-action-btn {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.detail-role {
+  background-color: #ffd700;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+.detail-section {
+  margin-bottom: 40px;
+}
+
+.detail-section-title {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.detail-title-row .detail-section-title {
+  margin: 0;
+}
+
+.detail-overview {
+  background-color: #fff;
+  padding: 25px;
+}
+
+.detail-overview p {
+  line-height: 1.6;
+  font-size: 16px;
+  white-space: pre-line;
+  margin: 0;
+}
+
+.detail-content .tech-tag {
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  /* Panah lightbox masuk ke dalam layar agar tidak terpotong di HP */
+  .lightbox-content {
+    max-width: 100%;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+  .lightbox-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Perbaikan layout --- */
+/* Section dengan margin auto di dalam flex column tidak ikut stretch, sehingga
+   melebar mengikuti isi carousel dan mendorong tombol panah keluar layar di HP */
+.about-container,
+.skills-container,
+.projects-container,
+.certificates-container,
+.contact-container,
+.gallery-container {
+  width: 100%;
+}
+
+.design-poster {
+  cursor: zoom-in;
+}
+
+@media (max-width: 768px) {
+  .design-title {
+    font-size: 1.15rem !important;
+    hyphens: auto;
+  }
 }

@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail, MdSend } from "react-icons/md";
-import fotoProfil from "../assets/PhotoSakeh.jpeg";
+import fotoProfil from "../assets/PhotoSakeh.webp";
+import { profile } from "../data/profile";
 
 export default function Hero() {
   return (
@@ -19,41 +20,23 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="action-buttons" style={{ flexWrap: "wrap" }}>
-          <a href="#contact" style={{ textDecoration: "none" }}>
-            <button className="btn-primary neo-box">
-              Get in touch <MdSend size={22} style={{ marginLeft: "8px" }} />
-            </button>
+        <div className="action-buttons">
+          <a href="#contact" className="btn-primary neo-box">
+            Get in touch <MdSend size={22} />
           </a>
-          
-          {/* 👇 SOLUSINYA DI SINI: Membungkus ketiga ikon agar turun baris bersamaan 👇 */}
-          <div style={{ display: "flex", gap: "12px" }}>
-            <a
-              href="https://github.com/rifqisyekhi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn-icon neo-box" aria-label="Github">
-                <FaGithub size={26} />
-              </button>
+
+          {/* Dibungkus agar ketiga ikon turun baris bersamaan */}
+          <div className="hero-socials">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="btn-icon neo-box" aria-label="Github">
+              <FaGithub size={26} />
             </a>
-            <a
-              href="https://www.linkedin.com/in/rifqisyekhi/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn-icon neo-box" aria-label="Linkedin">
-                <FaLinkedin size={26} />
-              </button>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="btn-icon neo-box" aria-label="Linkedin">
+              <FaLinkedin size={26} />
             </a>
-            <a href="mailto:rifqisyekhi@gmail.com">
-              <button className="btn-icon neo-box" aria-label="Email">
-                <MdOutlineEmail size={28} />
-              </button>
+            <a href={`mailto:${profile.email}`} className="btn-icon neo-box" aria-label="Email">
+              <MdOutlineEmail size={28} />
             </a>
           </div>
-          {/* 👆 BATAS BUNGKUSAN 👆 */}
-
         </div>
       </div>
 

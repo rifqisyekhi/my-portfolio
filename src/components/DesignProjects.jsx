@@ -1,10 +1,11 @@
-import { useRef } from "react";
-import poster1 from "../assets/Poster1.png";
-import poster2 from "../assets/Poster2.png";
-
-// --- IMPORTS ICON ---
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { useState } from "react";
 import { MdRemoveRedEye } from "react-icons/md";
+import useCarousel from "../hooks/useCarousel";
+import CarouselControls from "./CarouselControls";
+import ImageLightbox from "./ImageLightbox";
+
+import poster1 from "../assets/Poster1.webp";
+import poster2 from "../assets/Poster2.webp";
 
 const designData = [
   {
@@ -16,7 +17,6 @@ const designData = [
     desc2:
       "This poster was entered into the PAKU-XII competition at Suryakancana University Cianjur, and won 2nd place.",
     btnColor: "bg-blue",
-    link: "#",
   },
   {
     id: 2,
@@ -27,67 +27,24 @@ const designData = [
     desc2:
       "Which means creating your own learning ideas by choosing appropriate methods and technology to support these steps.",
     btnColor: "bg-pink",
-    link: "#",
   },
 ];
 
 export default function DesignProjects() {
-  const scrollContainerRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const card = scrollContainerRef.current.children[0];
-
-      if (card) {
-        const cardWidth = card.offsetWidth;
-        const gap = 30;
-        const scrollAmount = cardWidth + gap;
-
-        scrollContainerRef.current.scrollBy({
-          left: direction === "left" ? -scrollAmount : scrollAmount,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
+  const [scrollContainerRef, scroll] = useCarousel();
+  const [openIndex, setOpenIndex] = useState(null);
+  const posters = designData.map((item) => item.imgSrc);
 
   return (
     <section className="projects-container" id="design-projects">
-      <style>{`
-        .carousel-controls {
-          display: flex;
-          gap: 10px;
-        }
-
-        .carousel-controls .arrow-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-        }
-      `}</style>
-
-      <div className="projects-header-area" style={{ marginBottom: "20px" }}>
-        <h2
-          className="section-title-large neo-box"
-          style={{
-            padding: "12px 24px",
-            fontSize: "2rem",
-            backgroundColor: "var(--oranye)",
-          }}
-        >
+      <div className="projects-header-area section-header-compact">
+        <h2 className="section-title-large neo-box section-title-compact bg-orange">
           DESIGN PROJECTS
         </h2>
-        <div className="carousel-controls">
-          <button onClick={() => scroll("left")} className="neo-box arrow-btn">
-            <BsArrowLeft />
-          </button>
-          <button onClick={() => scroll("right")} className="neo-box arrow-btn">
-            <BsArrowRight />
-          </button>
-        </div>
+        <CarouselControls onScroll={scroll} />
       </div>
       <div className="projects-scroll-container" ref={scrollContainerRef}>
-        {designData.map((item) => (
+        {designData.map((item, idx) => (
           <div className="design-card neo-box" key={item.id}>
             <div className="design-content">
               <h3 className="design-title">{item.title}</h3>
@@ -96,53 +53,34 @@ export default function DesignProjects() {
                 <p>{item.desc2}</p>
               </div>
 
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setOpenIndex(idx)}
                 className={`btn-details ${item.btnColor} neo-box`}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                  textDecoration: "none",
-                  textAlign: "center",
-                  color: "inherit",
-                  marginTop: "auto",
-                  padding: "12px 24px",
-                  fontWeight: "bold",
-                }}
               >
                 <MdRemoveRedEye size={20} /> View HD Design
-              </a>
+              </button>
             </div>
-            <div
-              style={{
-                flex: 1,
-                backgroundColor: "var(--putih-krem)",
-                position: "relative",
-                minHeight: "450px",
-              }}
-            >
+            <div className="design-image-area">
               <img
                 src={item.imgSrc}
                 alt={item.title}
-                style={{
-                  position: "absolute",
-                  top: "30px",
-                  bottom: "30px",
-                  left: "30px",
-                  right: "30px",
-                  width: "calc(100% - 60px)",
-                  height: "calc(100% - 60px)",
-                  objectFit: "contain",
-                }}
+                className="design-poster"
+                onClick={() => setOpenIndex(idx)}
               />
             </div>
           </div>
         ))}
       </div>
+
+      {openIndex !== null && (
+        <ImageLightbox
+          images={posters}
+          index={openIndex}
+          onChange={setOpenIndex}
+          onClose={() => setOpenIndex(null)}
+        />
+      )}
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail, MdSend } from "react-icons/md";
-import fotoProfil from "../assets/PhotoSakeh.webp";
+import fotoProfil from "../assets/profile.webp";
 import { profile } from "../data/profile";
 
 export default function Hero() {

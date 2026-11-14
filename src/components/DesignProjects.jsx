@@ -3,32 +3,7 @@ import { MdRemoveRedEye } from "react-icons/md";
 import useCarousel from "../hooks/useCarousel";
 import CarouselControls from "./CarouselControls";
 import ImageLightbox from "./ImageLightbox";
-
-import poster1 from "../assets/Poster1.webp";
-import poster2 from "../assets/Poster2.webp";
-
-const designData = [
-  {
-    id: 1,
-    imgSrc: poster1,
-    title: "Poster Kewarganegaraan",
-    desc1:
-      "Pancasila reflects the spirit of unity and unity of the Indonesian nation by respecting ethnic, religious, cultural and linguistic diversity, as well as being a moral guide to achieving justice and peace together.",
-    desc2:
-      "This poster was entered into the PAKU-XII competition at Suryakancana University Cianjur, and won 2nd place.",
-    btnColor: "bg-blue",
-  },
-  {
-    id: 2,
-    imgSrc: poster2,
-    title: "Poster Song Analysis With Spotify",
-    desc1:
-      "This poster was a collaboration with my friend Audrey. This poster is about learning ideas, technology, and exploration methods.",
-    desc2:
-      "Which means creating your own learning ideas by choosing appropriate methods and technology to support these steps.",
-    btnColor: "bg-pink",
-  },
-];
+import { designData } from "../data/designs";
 
 export default function DesignProjects() {
   const [scrollContainerRef, scroll] = useCarousel();
@@ -45,7 +20,7 @@ export default function DesignProjects() {
       </div>
       <div className="projects-scroll-container" ref={scrollContainerRef}>
         {designData.map((item, idx) => (
-          <div className="design-card neo-box" key={item.id}>
+          <div className="design-card neo-box" key={item.title}>
             <div className="design-content">
               <h3 className="design-title">{item.title}</h3>
               <div className="design-desc">

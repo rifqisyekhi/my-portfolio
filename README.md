@@ -37,34 +37,50 @@ Sebuah *website* portofolio interaktif yang dibangun menggunakan **React + Vite*
 ## 🗂️ Struktur Folder
 ```
 my-portfolio
-├─ public/                  # File statis (favicon)
+├─ public/                     # File statis (favicon)
 ├─ src/
-│  ├─ assets/               # Gambar project, sertifikat, dokumentasi
-│  ├─ components/           # Komponen per section + komponen reusable
-│  │  ├─ CarouselControls.jsx
-│  │  ├─ ImageLightbox.jsx
-│  │  ├─ LiveLinksModal.jsx
-│  │  └─ Hero, About, Skills, Documentation, Projects, ProjectDetail,
-│  │     DesignProjects, Certificates, Contact, Navbar, Footer
-│  ├─ data/
-│  │  ├─ profile.js         # Email, nomor HP, link sosial media & resume
-│  │  └─ projectData.js     # Data semua project (dipakai Projects & ProjectDetail)
-│  ├─ hooks/
-│  │  ├─ useCarousel.js     # Logika geser carousel horizontal
-│  │  ├─ useEscapeKey.js    # Menutup modal dengan tombol Esc
-│  │  └─ useSectionNav.js   # Navigasi ke section dari halaman mana pun
-│  ├─ App.jsx               # Routing (/ dan /project/:projectId)
-│  ├─ index.css             # Seluruh styling
+│  ├─ assets/                  # Semua gambar (format .webp)
+│  │  ├─ projects/<id-project>/   # cover.webp, 1.webp, 2.webp, analyst-1.webp, ...
+│  │  ├─ certificates/
+│  │  ├─ designs/
+│  │  ├─ documentation/
+│  │  └─ profile.webp
+│  ├─ components/              # Komponen tampilan (tidak perlu disentuh untuk update konten)
+│  ├─ data/                    # ✏️ SEMUA KONTEN ADA DI SINI
+│  │  ├─ projectData.js
+│  │  ├─ certificates.js
+│  │  ├─ designs.js
+│  │  ├─ documentation.js
+│  │  ├─ skills.js
+│  │  ├─ profile.js            # Email, nomor HP, link sosial media & resume
+│  │  └─ images.js             # Pemuat gambar otomatis (import.meta.glob)
+│  ├─ hooks/                   # useCarousel, useSectionNav, useEscapeKey
+│  ├─ App.jsx                  # Routing (/ dan /project/:projectId)
+│  ├─ index.css                # Seluruh styling
 │  └─ main.jsx
-├─ vercel.json              # Rewrite SPA agar refresh tidak 404
+├─ vercel.json                 # Rewrite SPA agar refresh tidak 404
 └─ vite.config.js
 ```
 
-## ➕ Menambah Project Baru
-1. Simpan gambar di `src/assets/`.
-2. Import gambar lalu tambahkan objek baru di `src/data/projectData.js`
-   (`id`, `title`, `cover`, `gallery`, `tech`, `github`, `live`, `systemOverview`, `systemAnalyst`, dll).
-3. `live` bisa berupa string URL, atau array `{ name, url }` untuk menampilkan pop-up pilihan link.
+## ✏️ Update Konten
+
+### Menambah project
+1. Buat folder `src/assets/projects/<id-project>/` berisi:
+   - `cover.webp` → gambar kartu (wajib)
+   - `1.webp`, `2.webp`, ... → galeri screenshot (opsional, otomatis urut angka)
+   - `analyst-1.webp`, `analyst-2.webp`, ... → diagram System Analyst (opsional)
+2. Tambahkan objek di `src/data/projectData.js` dengan `id` **sama persis** dengan nama folder.
+   Gambar tidak perlu di-import, semuanya terbaca otomatis.
+3. `live` bisa berupa string URL, atau array `{ name, url }` untuk pop-up pilihan link.
+
+### Menambah sertifikat / desain / dokumentasi
+1. Simpan gambar di `src/assets/certificates/`, `designs/`, atau `documentation/`.
+2. Tambahkan objek di file data yang sesuai, contoh: `imgSrc: image("certificates/nama-file")` (tanpa ekstensi).
+
+### Tips gambar
+- Pakai format **.webp**, lebar maksimal sekitar **1920px**, supaya website tetap ringan.
+- Nama file pakai huruf kecil dan tanda hubung, contoh `sertifikat-aws.webp`.
+- Kalau gambar tidak muncul, buka console browser: ada pesan `[images] ... tidak ditemukan` yang menunjukkan path yang salah.
 
 ## 💻 Menjalankan Secara Lokal
 ```bash
